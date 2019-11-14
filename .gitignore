@@ -47,4 +47,4 @@ cleaner*
 unloader*
 
 # Exclude folders
-thirdparty
+thirdparty/libtorch
