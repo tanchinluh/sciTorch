@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
+<map version="1.0">
+<mapID target="index" url="index.html"/>
+<mapID target="section_4fc5035dc94e8d0f91b450ce8e6104c1" url="section_4fc5035dc94e8d0f91b450ce8e6104c1.html"/>
+<mapID target="torch_broadcast" url="torch_broadcast.html"/>
+<mapID target="torch_forward" url="torch_forward.html"/>
+<mapID target="torch_list" url="torch_list.html"/>
+<mapID target="torch_load" url="torch_load.html"/>
+<mapID target="torch_path" url="torch_path.html"/>
+<mapID target="torch_props" url="torch_props.html"/>
+<mapID target="torch_unload" url="torch_unload.html"/>
+<mapID target="torch_unloadall" url="torch_unloadall.html"/>
+</map>

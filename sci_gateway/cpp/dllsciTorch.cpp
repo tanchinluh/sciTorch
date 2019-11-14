@@ -25,13 +25,13 @@
 #include "Windows.h"
 /*--------------------------------------------------------------------------*/
 #if _WIN64
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/c10.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/clog.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/cpuinfo.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/libprotobuf-lite.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/libprotobuf.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/libprotoc.lib")
-#pragma comment(lib,"../../thirdparty/libtorch/windows/x64/lib/torch.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/c10.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/clog.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/cpuinfo.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/libprotobuf-lite.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/libprotobuf.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/libprotoc.lib")
+#pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/torch.lib")
 #pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_world410.lib")
 #pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_img_hash410.lib")
 #pragma comment(lib,"../../../IPCV/sci_gateway/cpp/gw_ipcv.lib")

@@ -116,9 +116,8 @@ function builder_gateway_cpp()
         [m,ipcv_path]=libraryinfo('ipcvlib');   // To get path for IPCV - macro path
         torch_tp_path = fullpath(gw_cpp_path + "../../thirdparty");
         
-        TORCH_INCLUDE = fullpath(torch_tp_path + "/libtorch/windows/include");
-        TORCH2_INCLUDE = fullpath(torch_tp_path + "/libtorch/windows/include/torch/csrc/api/include");
-        //OPENCV_INCLUDE = fullpath(gw_cpp_path + "../../thirdparty/opencv/windows/include");
+        TORCH_INCLUDE = fullpath(torch_tp_path + "/libtorch/windows/CPU/include");
+        TORCH2_INCLUDE = fullpath(torch_tp_path + "/libtorch/windows/CPU/include/torch/csrc/api/include");
         OPENCV_INCLUDE = fullpath(ipcv_path + "/../thirdparty/opencv/windows/include");
         IPCV_INCLUDE = fullpath(ipcv_path + "/../sci_gateway/cpp");
         

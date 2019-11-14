@@ -1,5 +1,5 @@
 function Iout = torch_broadcast(x,Iin)
-    // Variable broadcasting
+    // Variable Broadcasting
     //
     // Syntax
     //     Iout = torch_broadcast(x,Iin);

@@ -76,7 +76,7 @@ OTHERLIBS = C:\PROGRA~1\SCILAB~1.2\contrib\IPCV\sci_gateway\cpp\gw_ipcv.lib
 # ------------------------------------------------------
 #CC = 
 # ------------------------------------------------------
-CFLAGS = $(CC_OPTIONS) -D__SCILAB_TOOLBOX__ -DFORDLL  -I"C:\PROGRA~1\SCILAB~1.2\contrib\IPCV\thirdparty\opencv\windows\include" -I"C:\Program Files\scilab-6.0.2\contrib\sciTorch\thirdparty\libtorch\windows\include" -I"C:\Program Files\scilab-6.0.2\contrib\sciTorch\thirdparty\libtorch\windows\include\torch\csrc\api\include" -I"C:\PROGRA~1\SCILAB~1.2\contrib\IPCV\sci_gateway\cpp" -DNDEBUG -DGW_SCITORCH_GW_EXPORTS  
+CFLAGS = $(CC_OPTIONS) -D__SCILAB_TOOLBOX__ -DFORDLL  -I"C:\PROGRA~1\SCILAB~1.2\contrib\IPCV\thirdparty\opencv\windows\include" -I"C:\Program Files\scilab-6.0.2\contrib\sciTorch\thirdparty\libtorch\windows\CPU\include" -I"C:\Program Files\scilab-6.0.2\contrib\sciTorch\thirdparty\libtorch\windows\CPU\include\torch\csrc\api\include" -I"C:\PROGRA~1\SCILAB~1.2\contrib\IPCV\sci_gateway\cpp" -DNDEBUG -DGW_SCITORCH_GW_EXPORTS  
 # ------------------------------------------------------
 FFLAGS = $(FC_OPTIONS) -DFORDLL  
 # ------------------------------------------------------

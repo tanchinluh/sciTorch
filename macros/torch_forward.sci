@@ -1,5 +1,5 @@
 function out = torch_forward(model,in)
-    // Forward pass
+    // Forward Pass
     //
     // Syntax
     //     out = torch_forward(model,in)
