@@ -47,4 +47,7 @@ cleaner*
 unloader*
 
 # Exclude folders
-thirdparty/libtorch
+**/thirdparty/libtorch/windows/CPU/include
+**/thirdparty/libtorch/windows/CPU/lib
+**/thirdparty/libtorch/windows/CUDA/include
+**/thirdparty/libtorch/windows/CUDA/lib
