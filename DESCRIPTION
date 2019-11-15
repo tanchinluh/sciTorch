@@ -23,7 +23,7 @@ License: GPL v.3
 
 ScilabVersion: >= 6.0
 
-Depends: 
+Depends: >= IPCV 4.1.2
 
 Date: 2019-09-09 12:00:007
 
