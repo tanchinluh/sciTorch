@@ -44,7 +44,7 @@ void print_modules(const torch::jit::script::Module& module, size_t level = 0) {
 		//std::cout << parameter.value().toTensor().sizes() << " (\n";
 
 		tabs(level + 1);
-		sciprint("%s\t", parameter.name());
+		sciprint("%s\t", parameter.name().c_str());
 		std::vector<int64_t> sz = parameter.value().toTensor().sizes().vec();
 		std::vector<int64_t>::iterator it;
 		sciprint("[");

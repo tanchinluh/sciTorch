@@ -59,14 +59,14 @@ function sciTorchlib = startModule()
         sciTorch_windows_torch(root_tlbx,TORCH_LIBS);
 
     elseif getos() == 'Darwin' // Mac        
-        exec(etc_tlbx+'IPCV_MacOS.sci');
-        IPCV_MacOS(root_tlbx,TORCH_LIBS);
+        exec(etc_tlbx+'sciTorch_MacOS.sci');
+        sciTorch_MacOS(root_tlbx,TORCH_LIBS);
 
     else // Linux
-        exec(etc_tlbx+'IPCV_linux.sci');
-        IPCV_linux(root_tlbx,OPENCV_LIBS);
-        exec(etc_tlbx+'IPCV_linux_torch.sci');
-        IPCV_linux_torch(root_tlbx,TORCH_LIBS);        
+        //exec(etc_tlbx+'sciTorch_linux.sci');
+        //sciTorch_linux(root_tlbx,OPENCV_LIBS);
+        exec(etc_tlbx+'sciTorch_linux_torch.sci');
+        sciTorch_linux_torch(root_tlbx,TORCH_LIBS);        
     end
 
 

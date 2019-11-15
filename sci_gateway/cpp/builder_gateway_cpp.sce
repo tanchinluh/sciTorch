@@ -64,51 +64,26 @@ function builder_gateway_cpp()
 
         gw_cpp_files = [gw_cpp_files; "common.h"];
         gw_cpp_files(gw_cpp_files == 'dllsciTorch.cpp') = [];
+        [m,ipcv_path]=libraryinfo('ipcvlib');   // To get path for IPCV - macro path
+        torch_tp_path = fullpath(gw_cpp_path + "/../../thirdparty");
 
-        //        opencv_version = unix_g('pkg-config --modversion opencv');
-        //        if( length(opencv_version) == 0 | ( strtod( strsubst(opencv_version, '.', '')) <= 99.9 ) )
-        //            disp(gettext("OpenCV (version >= 2.4.3) is needed for compiling IPCV."));
-        //        end;
-        //
-        //        if ( strtod( strsubst(opencv_version, '.', '')) < 111 ) then //if opencv version <1.1.1
-        //            inter_cflags = "-DOPENCV_V1 ";
-        //        else
-        //            inter_cflags = "-DOPENCV_V2 ";
-        //        end;
-        //
-        //        inter_cflags = inter_cflags + unix_g('pkg-config --cflags opencv');
-        //
-        //        OPENCV_INCLUDE_ROOT_PATH = fullpath(gw_cpp_path + "../../thirdparty/opencv/Linux/include");
-        //        OPENCV_INCLUDE = fullpath(OPENCV_INCLUDE_ROOT_PATH + "/opencv");
-        //        OPENCV2_INCLUDE = fullpath(OPENCV_INCLUDE_ROOT_PATH + "/opencv2");
-        //        
-        //        if isempty(inter_cflags)
-        //            inter_cflags =  ' -I'+OPENCV_INCLUDE_ROOT_PATH + ' -I'+OPENCV_INCLUDE + ' -I'+OPENCV2_INCLUDE;
-        //        else
-        //            inter_cflags =  inter_cflags + ' -I'+OPENCV_INCLUDE_ROOT_PATH + ' -I'+OPENCV_INCLUDE + ' -I'+OPENCV2_INCLUDE;
-        //        end
-        //        // inter_ldflags = unix_g('pkg-config --libs opencv');
-        //        //
-        //        if (length(inter_cflags)==0) then
-        //            disp("Can not find OpenCV. Compiling IPCV needs OpenCV");
-        //        end
-        THIRDPARTY_ROOT_PATH = fullpath(gw_cpp_path + "../../thirdparty");
-        OPENCV_INCLUDE = fullpath(THIRDPARTY_ROOT_PATH + "/opencv/Linux/include");
-        TORCH_INCLUDE = fullpath(THIRDPARTY_ROOT_PATH + "/libtorch/Linux/include");
-        TORCH2_INCLUDE = fullpath(THIRDPARTY_ROOT_PATH + "/libtorch/Linux/include/torch/csrc/api/include");
-        //TORCH_INCLUDE = fullpath(gw_cpp_path + "/../../thirdparty/libtorch/Linux/include");
-        //TORCH2_INCLUDE = fullpath(gw_cpp_path + "/../../thirdparty/libtorch/Linux/include/torch/csrc/api/include");
+
+        TORCH_INCLUDE = fullpath(torch_tp_path + "/libtorch/Linux/CPU/include");
+        TORCH2_INCLUDE = fullpath(torch_tp_path + "/libtorch/Linux/CPU/include/torch/csrc/api/include");
+        OPENCV_INCLUDE = fullpath(ipcv_path + "/../thirdparty/opencv/Linux/include");
+        IPCV_INCLUDE = fullpath(ipcv_path + "/../sci_gateway/cpp");
 
         //inter_cflags = ilib_include_flag([OPENCV_INCLUDE,TORCH_INCLUDE, includes_src_cpp]);
         inter_cflags = ' -I'+OPENCV_INCLUDE;
         inter_cflags = inter_cflags + ' -I'+TORCH_INCLUDE;
         inter_cflags = inter_cflags + ' -I'+TORCH2_INCLUDE;
-        //inter_cflags = inter_cflags + ' -D_GLIBCXX_USE_CXX11_ABI=0';   // This is for LIBTorch
+        inter_cflags = inter_cflags + ' -I'+IPCV_INCLUDE;
+        //inter_cflags = inter_cflags + ' -D_GLIBCXX_USE_CXX11_ABI=0';   // This is for LIBTorch -no more, for future reference
         inter_ldflags = " -std=c++11";
         opencv_libs = [];
-
-        //all_libs = [opencv_libs, "../../src/cpp/libscidlib"];
-        all_libs = [];
+        
+        // Include IPCV library
+        all_libs = fullpath(ipcv_path + "/../sci_gateway/cpp/libgw_ipcv");
 
     else // Windows
         // Include paths, including torch, opencv and IPCV path

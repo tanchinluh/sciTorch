@@ -33,7 +33,11 @@
 #include <torch/script.h>
 #include <opencv2/opencv.hpp>
 //#include "C:/Program Files/scilab-6.0.2/contrib/IPCV/sci_gateway/cpp/gw_ipcv.h"
-#include <gw_ipcv.h>
+# ifdef _WIN64
+  # include <gw_ipcv.h>
+# else
+  # include <libgw_ipcv.h>
+#endif
 
 #define MAX_NET_NUM 3
 
