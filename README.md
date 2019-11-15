@@ -46,9 +46,7 @@ SCI is the scilab root folder.
 S = imread(fullpath(torch_path() + "/demos/images/" + "cat.jpg"));
 imshow(S);
 ```
-
 <img src="pictures/img1.jpg" alt="alt cat" width="375" height="350">
-
 ```
 model = torch_load(fullpath(torch_path() + "/demos/models/" + "sciGooglenet.pt"));
 S2 = im2double(S);
@@ -66,11 +64,11 @@ out = torch_forward(model,S3);
 str = mgetl(fullpath(torch_path() + "/demos/models/" + "classification_classes_ILSVRC2012.txt"));
 disp(str(I));
 title(str(I));
-
 ```
+
 <img src="pictures/img2.jpg" alt="alt cat2" width="375" height="350">
-```
 
+```
 // Top-5
 [maxV,maxI] = gsort(out);
 disp(str(maxI(1:5)));
@@ -79,6 +77,7 @@ e = gce(); ;
 e.font_size = 4;
 e.font_foreground = 4;
 ```
+
 <img src="pictures/img3.jpg" alt="alt cat3" width="375" height="350">
 
 ## Current Features
