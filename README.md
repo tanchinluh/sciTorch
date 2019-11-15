@@ -45,7 +45,9 @@ SCI is the scilab root folder.
 
 S = imread(fullpath(torch_path() + "/demos/images/" + "cat.jpg"));
 imshow(S);
+```
 ![alt cat](pictures/img1.jpg)
+```
 model = torch_load(fullpath(torch_path() + "/demos/models/" + "sciGooglenet.pt"));
 S2 = im2double(S);
 
