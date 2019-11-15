@@ -9,23 +9,16 @@ function sciTorch_windows_torch(root_tlbx,TORCH_LIBS)
        error('Windows 32-bits not supported');
     end
 
-//    for l = 1:size(OPENCV_LIBS, '*')
-//        if execstr('link(opencvDllPath + OPENCV_LIBS(l) + getdynlibext())', 'errcatch') <> 0 then
-//            bDepsLoaded = %f;
-//            
-//            break;
-//        end
-//    end
-
     tmp = pwd();
     cd(torchDllPath);
 
+    TORCH_LIBS = ls('*.dll');
+    
     for l = 1:size(TORCH_LIBS, '*')
 //        pause
-        if execstr('link(TORCH_LIBS(l) + getdynlibext())', 'errcatch') <> 0 then
+        if execstr('link(TORCH_LIBS(l))', 'errcatch') <> 0 then
             bDepsLoaded = %f;
-            disp(TORCH_LIBS(l));
-            break;
+            disp(TORCH_LIBS(l)+' failed');
         else
             disp(TORCH_LIBS(l)+' loaded');
         end

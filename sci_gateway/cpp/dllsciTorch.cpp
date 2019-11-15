@@ -32,8 +32,8 @@
 #pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/libprotobuf.lib")
 #pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/libprotoc.lib")
 #pragma comment(lib,"../../thirdparty/libtorch/windows/CPU/lib/torch.lib")
-#pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_world410.lib")
-#pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_img_hash410.lib")
+#pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_world412.lib")
+#pragma comment(lib,"../../../IPCV/thirdparty/opencv/windows/x64/lib/opencv_img_hash412.lib")
 #pragma comment(lib,"../../../IPCV/sci_gateway/cpp/gw_ipcv.lib")
 #else
 #pragma comment(lib,"../../thirdparty/opencv/windows/x86/lib/opencv_world410.lib")
