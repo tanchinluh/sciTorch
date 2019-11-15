@@ -16,6 +16,8 @@
 *.lo
 *.jar
 lib
+libgw*
+gw*
 
 # Shared objects (inc. Windows DLLs)
 *.dll
