@@ -2,6 +2,20 @@
 
 Scilab Interface to libTorch
 
+## Introduction
+
+sciTorch module is built to allow more non-programmers (light-programmers) to be able to use, and understand deep neural network. The reason of choosing libTorch (pyTorch) as the engine is because it provides python/C++ parity (in the roadmap) which make it much simple to be integrated seamlessly with Scilab.
+
+This initial release wouls start a baby step of integration, which is importing thr torch script module from the pyTorch into Scilab, and used it for inferencing. Working with Scilab IPCV 4.1.2, it make the image preprocessing and post processing much simpler to prepare to the image for the network, as well as to present to the users.
+
+This makes the module suitable for:
+1. Lecturers who want to show the use of pre-trainined DNN/CNN
+2. As the option to test the network before deploying to other platform
+3. Understanding the how the correct input data important (data type, data range, normalizing data, etc) to get good result
+4. Simplifying the image processing and computer vision parts with the help of Scilab IPCV module
+
+We wish more experts would contributes to this module and make it a more complete high level tools for Deep Neural Network. 
+
 ## Getting Started
 
 
