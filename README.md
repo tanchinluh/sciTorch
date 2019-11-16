@@ -100,11 +100,11 @@ e.font_foreground = 4;
 * Seamlessly integrated with Scilab IPCV module for image preprocessing and post processing.
   
 ## Future Plan
-   * Training of the network
-   * 
-   * Translate blocks interfaces and error messages
-   * Support for GPU
- 
+   * GPU inferencing support
+   * Data loader support
+   * Training of simple network
+   * Complete flow from loading data, training to inferencing
+   * GPU training 
 
 ## Version
 
